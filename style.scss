@@ -26,7 +26,6 @@ nav {
 
         a {
             color: #fff;
-            padding: 0 30px;
             text-decoration: none;
             transition: 0.1s;
 
@@ -35,6 +34,18 @@ nav {
             }
         }
     }
+}
+
+#desk-menu {
+    a{
+        padding: 0 30px;
+    }
+}
+
+// 選單
+#menu {
+    // 桌電時隱藏
+    display: none;
 }
 
 #banner {
@@ -103,6 +114,21 @@ nav {
     nav {
         div {
             @include table-box();
+            display: none;
+        }
+        #menu {
+            display: block;
+            a{
+                display: none;
+                &:nth-child(1) {
+                    display: block;
+                }
+            }
+            &:hover a:nth-child(n+2) {
+                    display: block;
+                    padding: 20px 0;
+                }
+            
         }
     }
     #picture {
@@ -142,32 +168,47 @@ nav {
     nav {
         div {
             @include mobile-box();
+            display: none;
         }
-    }
-        
+        #menu {
+            display: block;
+            a{
+                display: none;
+                &:nth-child(1) {
+                    display: block;
+                }
+            }
+            &:hover a:nth-child(n+2) {
+                    display: block;
+                    padding: 20px 0;
+                }
+            
+        }
     }
 
     #picture {
         @include mobile-box();
         grid-template-columns: repeat(1, 1fr);
         div {
+
             &:nth-child(1) {
                 text-align: center;
                 align-items: center;
                 height: 100px;
             }
+
             &:nth-child(2) {
                 background: url(./img/m-beach-1.png);
                 background-size: cover;
-                
             }
+
             &:nth-child(3) {
                 background: url(./img/m-beach-2.png);
                 background-size: cover;
-                
             }
         }
     }
+    
     #content {
         @include mobile-box();
         grid-template-columns: 1fr;
@@ -175,8 +216,8 @@ nav {
         div {
             grid-column: 1/2;
         }
-
     }
+}
 
 
 #down {
@@ -187,4 +228,4 @@ nav {
     text-align: center;
     align-items: center;
     color: #ffffff88;
-}
+}   

@@ -23,7 +23,6 @@ nav div {
 
 nav div a {
   color: #fff;
-  padding: 0 30px;
   text-decoration: none;
   -webkit-transition: 0.1s;
   transition: 0.1s;
@@ -31,6 +30,14 @@ nav div a {
 
 nav div a:hover {
   color: #d6c0a4;
+}
+
+#desk-menu a {
+  padding: 0 30px;
+}
+
+#menu {
+  display: none;
 }
 
 #banner {
@@ -107,6 +114,20 @@ nav div a:hover {
     margin: 0 auto;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+    display: none;
+  }
+  nav #menu {
+    display: block;
+  }
+  nav #menu a {
+    display: none;
+  }
+  nav #menu a:nth-child(1) {
+    display: block;
+  }
+  nav #menu:hover a:nth-child(n+2) {
+    display: block;
+    padding: 20px 0;
   }
   #picture {
     width: 750px;
@@ -151,9 +172,20 @@ nav div a:hover {
     margin: 0 auto;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+    display: none;
   }
-  #banner {
-    width: 100%;
+  nav #menu {
+    display: block;
+  }
+  nav #menu a {
+    display: none;
+  }
+  nav #menu a:nth-child(1) {
+    display: block;
+  }
+  nav #menu:hover a:nth-child(n+2) {
+    display: block;
+    padding: 20px 0;
   }
   #picture {
     width: 400px;
